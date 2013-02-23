@@ -1,0 +1,19 @@
+require_relative "../../../lib/ruby-ois.rb"
+
+SWIG = 'swig'
+SWIGFLAGS = "-ruby -c++ #{Ruby::Ois::get_inc_flags} -autorename"
+
+TARGET = 'ois_wrap.cpp'
+
+#puts SWIGFLAGS
+
+task :default => "#{TARGET}"
+
+file "#{TARGET}" => "ois.i" do |t|
+  sh "#{SWIG} #{SWIGFLAGS} -o  #{t.name} #{t.prerequisites[0]}"
+end
+
+task :clean do
+  sh "rm -f #{TARGET} ois_wrap.h"
+end
+
