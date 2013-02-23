@@ -1,6 +1,6 @@
-# Ruby::Ois
+# ruby-ois
 
-TODO: Write a gem description
+Ruby-ois is a ruby binding for OIS.
 
 ## Installation
 
@@ -16,9 +16,17 @@ Or install it yourself as:
 
     $ gem install ruby-ois
 
-## Usage
+## How to install from source.
 
-TODO: Write usage instructions here
+If you want to compile from source, try the following.
+
+    $ git clone git://github.com/abexsoft/ruby-ois.git 
+    $ cd ruby-ois 
+    $ rake download 
+    $ rake compile 
+    $ rake build 
+    $ gem build ruby-ois.gemspec
+    $ gem install ruby-ois-<version>-<arch>.gem 
 
 ## Contributing
 
